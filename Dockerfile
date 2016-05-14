@@ -5,6 +5,10 @@ USER root
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.2.4/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
  && chmod +x /usr/local/bin/kubectl;
 
+ ENV NPM_CONFIG_LOGLEVEL info
+ ENV NODE_VERSION 5.6.0
+ ENV LC_ALL=POSIX
+ 
  # Node.JS and Meteor
 RUN  apt-get update && \
      apt-key update && \
