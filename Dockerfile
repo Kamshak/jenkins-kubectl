@@ -7,6 +7,7 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.2.4/bin
 
  # Node.JS and Meteor
 RUN  apt-get update && \
+     apt-key update && \
      apt-get -y install locales build-essential libssl-dev libkrb5-dev gcc make ruby-full rubygems-integration && \
      gem install sass compass && \
      apt-get clean && \
